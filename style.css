@@ -1,0 +1,165 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 230px;
+  } /* Это прям "вау-эффект" за 1 строку */
+
+:root {
+  --header-height: 230px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color:#cdd9eb;
+  background-image: url("https://img.freepik.com/free-photo/bright-summer-sky-fluffy-clouds-nature-beauty-clear-weather-generated-by-artificial-intelligence_188544-149914.jpg?semt=ais_hybrid");
+  background-size: cover; /* Растягивает изображение на всю область */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Запрещает повторение */
+  background-attachment: fixed; /* Фиксирует фон при прокрутке */
+  
+  padding-top: var(--header-height);
+  
+  /* padding-top: 230px; /* высота header */ */ 
+  font-size: 16px;
+  line-height: 1.5;
+}
+main { /* Ограничение ширины всей страницы */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  
+  position: fixed;  /* sticky убрал - header дергался */
+  top: 0; /* фиксированная шапка */
+  left: 0;  
+  width: 100%;  
+  z-index: 1000;    /* фиксированная шапка */     
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: linear-gradient(to right, rgb(0, 102, 255), purple);
+  padding: 10px 20px;
+  
+  }
+
+.header h1,
+.header p {
+  margin: 5px 0;
+}
+
+.title {
+  
+  /* top: 10px;
+  left: 10px; */ 
+  font-size: 36px;
+  color:  rgb(243, 245, 143);
+}
+
+.section {
+  
+  scroll-margin-top: var(--header-height);
+  /* scroll-margin-top: 120px; */ 
+  flex-direction: column;
+  align-items: center; /* Центр по экрану */
+  position: relative;
+  background-color: white; 
+  max-width: 800px; /* База всех сайтов */
+  margin: 20px auto; /* База всех сайтов */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.scroll-top:hover {
+  background: darkblue;
+}
+
+/* .container {
+  display: flex;
+} */ 
+
+.nav {
+  color: rgb(139, 0, 120); 
+  background-color: white; /* Чтобы sticky меню не пряталось */
+  width: 100%;
+  /* z-index: 100; /* Чтобы sticky меню не пряталось */ */
+}
+
+.nav h2 {
+  color: rgb(139, 0, 120);
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center; /* Распределение кнопок*/
+}
+
+.nav li {
+    margin-right: 15px;
+}
+
+.nav a {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(6, 136, 241);
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.nav a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.footer {
+font-size: 12px;
+line-height: 1.4;
+margin-bottom: 20px;
+}
+
+
+h2 {
+  font-size: 24px;
+  color: darkgreen;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+

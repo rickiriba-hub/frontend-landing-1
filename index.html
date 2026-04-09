@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Мое обучение фронтенду</title>
+</head>
+<body>
+
+<header class="header">
+  <h1 class="title">Моё обучение фронтенду</h1>
+  <p>Дата начала: 25.03.2026</p>
+   <nav class="nav" aria-label="Навигация по странице">
+    <h2>Навигация по странице</h2>
+      <ul>
+        <li><a href="#skills">Список навыков</a></li>
+        <li><a href="#goals">Цели</a></li>
+        <li><a href="#plan">План</a></li>
+        <li><a href="#table">Таблица</a></li>
+        <li><a href="#form">Форма</a></li>
+      </ul>
+    </nav>
+ 
+</header> 
+
+<main>
+
+<section class="section" id="skills">
+  <span class="badge">NEW</span>
+<h2>Список навыков</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+</section>
+
+<section class="section" id="goals">
+<h2>Мои цели во фронтенде</h2>
+<ol>
+  <li>
+    Освоить продвинутый уровень основ
+    <ol>
+     <li>HTML</li>
+     <li>CSS</li>
+     <li>JavaScript</li>
+    </ol>
+</li>
+
+  <li>
+    Освоить soft skills
+    <ol>
+     <li>Научиться работать в команде</li>
+     <li>Знакомиться и осваивать новые технологии</li>
+     <li>Научиться работать в GitHub</li>
+    </ol>
+  </li>
+
+  <li>
+    Стать профессиональным фронтендером
+    <ol>
+     <li>Верстать простые страницы, брать заказы</li>
+     <li>Стать штатным сотрудником или удаленным работником</li>
+     <li>Выполнять работу по контракту</li>
+    </ol>
+  </li>
+</ol>
+</section>
+
+<section class="section" id="plan">
+<h2>План на неделю</h2>
+ <ol>
+  <li>Изучить HTML</li>
+  <li>Попрактиковаться</li>
+  <li>Сделать проект</li>
+ </ol>
+</section>
+
+<section class="section" id="table">
+<h2>Таблица навыков</h2>
+ <table>
+ <thead>
+  <tr>
+    <th>Навык</th>
+    <th>Уровень</th>
+    <th>Дата начала</th>
+  </tr>
+ </thead> 
+ 
+ <tbody>
+  <tr>
+    <td>HTML</td>
+    <td>Начальный</td>
+    <td>25.03.2026</td>
+  </tr>
+  <tr>
+    <td>CSS</td>
+    <td>Начальный</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>JavaScript</td>
+    <td>Начальный</td>
+    <td>-</td>
+  </tr>
+</tbody>
+
+</table>
+</section>
+
+<section class="section" id="form">
+  <h2>Форма регистрации</h2>
+<form>
+  <fieldset>
+    <!-- <legend>Форма регистрации</legend> -->
+
+    <div>
+      <label for="name">Имя:</label><br>
+      <input type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Введите имя" 
+      required 
+      minlength="2"
+      pattern="[A-Za-zА-Яа-я\s]+"
+      title="Только буквы (русские или английские)"
+      >
+    </div>
+
+    <div>
+      <label for="email">Почта:</label><br>
+      <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Введите email" 
+      required>
+    </div>
+
+    <div>
+      <label for="password">Пароль:</label><br>
+      <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Введите пароль" 
+      required 
+      minlength="6"
+      pattern="(?=.*[A-Za-z])(?=.*[0-9]).+"
+      title="Пароль должен содержать минимум 6 символов, латинские буквы и цифры">
+    </div>
+
+    <div>
+      <label for="birth">Дата рождения:</label><br>
+      <input type="date" 
+      id="birth" 
+      name="birth" 
+      required max="2010-01-01">
+    </div>
+
+    <div>
+      <fieldset>
+       <legend>Пол</legend> 
+      <!-- <span>Пол:</span><br> -->
+      <input 
+      type="radio" 
+      id="male" 
+      name="gender" 
+      value="male" 
+      required>
+      <label for="male">Мужчина</label>
+
+      <input 
+      type="radio" 
+      id="female" 
+      name="gender" 
+      value="female">
+      <label for="female">Женщина</label>
+      </fieldset>
+    </div>
+
+    <div>
+      <input 
+      type="checkbox" 
+      id="agree" 
+      name="agree" 
+      required>
+      <label for="agree">Согласен с условиями</label>
+    </div>
+
+    <div>
+      <label for="about">Немного о себе:</label><br>
+      <textarea 
+      id="about" 
+      name="about" 
+      placeholder="О себе" 
+      required 
+      maxlength="200">
+    </textarea>
+    </div>
+
+    <div>
+      <button type="submit">Зарегистрироваться</button>
+    </div>
+
+  </fieldset>
+</form>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>На основании обучения с ChatGPT</p>
+  <p>Авторские права не установлены///</p>
+</footer>
+
+<a href="#" class="scroll-top">↑</a>
+
+</body>
+</html>
