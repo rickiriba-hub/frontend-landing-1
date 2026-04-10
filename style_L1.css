@@ -10,9 +10,9 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color:#cdd9eb;
+  background-color:rgb(155, 120, 120);
  
-  background-image: url("https://i.pinimg.com/736x/4f/f6/a5/4ff6a5dc8e9b16b25e63dcef83f16909.jpg");
+  background-image: url("https://i.pinimg.com/736x/77/13/d5/7713d5750d4d41581f560116be185a5a.jpg");
   background-size: cover; /* Растягивает изображение на всю область */
   background-position: center; /* Центрирует изображение */
   background-repeat: no-repeat; /* Запрещает повторение */
@@ -23,7 +23,9 @@ body {
 header {
   position: sticky;
   top: 0;
-  background: linear-gradient(to right, rgb(0, 102, 255), purple);
+  background: cofee;
+  background-image: url("https://i.pinimg.com/736x/77/13/d5/7713d5750d4d41581f560116be185a5a.jpg");
+  background-size: cover; /* Растягивает изображение на всю область */
   z-index: 100;
 }
 
@@ -38,7 +40,7 @@ header .container{
 .logo {
   margin: 0;
   padding-top: 0;
-  color: rgb(15, 1, 15);
+  color: #54433a;
   font-family: William, serif;
   font-weight: normal;
   font-size: 36px;
@@ -50,30 +52,30 @@ header .container{
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10 20px;
+  padding: 10px 10px;
 }
 
 .hero-text {
   flex: 1;
-  
   justify-content: center;
-
   max-width: 500px;
   font-size: 14px;
   text-transform: uppercase;
-  text-align: left;
-  color: purple;
+  text-align: center;
+  color:#54433a;
 }
 
 .hero-sub {
   /* max-width: 500px; */
   text-transform: uppercase;
-  color: rgb(8, 42, 233);
+  color: #401100;
+  text-align: center; /* центрируем подзаголовки */
 }
 
 .hero-image {
   flex: 1;
   display: flex;
+  padding-right: 20px;
   justify-content: center;
 }
 
@@ -85,26 +87,28 @@ header .container{
 
 #hero .container {
   display: flex;
+  flex-direction: column; /* элементы идут в колонку */
   gap: 40px;
   justify-content: center;
   align-items: center;
 
-  padding: 20px 0 20px 50px;
-  /* background-color: rgb(8, 207, 233); */
-  background-image: linear-gradient(to right top, #d633d0, #c255df, #af6ce8, #9d7eed, #8f8ced, #6d9efa, #44aeff, #00bcff, #00d2ff, #00e5e6, #00f3b1, #5ffb6c);
+  padding: 40px 20px;
+  background-color: #c2835e;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* ограничиваем ширину контейнера */
+  margin: 0 auto; /* центрируем контейнер */
 }
 
 #hero {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .scroll-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: blue;
+  background: #401100;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -114,13 +118,13 @@ header .container{
 }
 
 .scroll-top:hover {
-  background: darkblue;
+  background: #c2835e;
 }
 
 
 .nav {
-  color: rgb(139, 0, 120); 
-  background-color: linear-gradient(to right, rgb(0, 102, 255), purple); /* Чтобы sticky меню не пряталось */
+  color: #330000; 
+  background: transparent; /* Чтобы sticky меню не пряталось */
   width: 100%;
   /* z-index: 100; /* Чтобы sticky меню не пряталось */ */
 }
@@ -137,24 +141,28 @@ header .container{
 .nav a {
   font-weight: bold;
   text-decoration: none;
-  color: rgb(62, 159, 238);
+  color: #330000;
   padding: 8px 12px;
   border-radius: 5px;
 }
 
 .nav a:hover {
-  background-color: blue;
-  color: white;
+  background-color: #330000;
+  color: #ffe8d1;
 }
 
 .features-list {
   display: flex;
+  flex-direction: column; /* карточки идут в колонку */
   gap: 20px;
-  align-items: stretch;
+  align-items: center; /* центрируем карточки по горизонтали */
+  /* align-items: stretch; /* распределяем по горизонтали */ */
   flex-wrap: wrap;
 } /* создаем карточки */
 
 .feature {
+  max-width: 500px; /* фиксируем ширину карточки */
+  width: 100%; /* занимаем доступную ширину (с учётом max-width) */
   flex: 1;
   display: flex;
   gap: 10px;
@@ -164,17 +172,19 @@ header .container{
   align-items: center; /* Центр по экрану */
   text-align: center;
   position: relative;
-  background-color: rgb(107, 151, 218); 
+  background-color: #c2835e; 
   /* max-width: 800px; /* База всех сайтов */ */
   margin: 0; /* База всех сайтов */
   padding: 20px 20px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 0.5px solid #ffe8d1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: 0.3s; /* делай карточки живыми */
-  background-image: url("https://i.pinimg.com/736x/81/38/c0/8138c0d782192cbd97b4ae0b590252b5.jpg");
-
 } /* Параметры карточек */
+
+.feature p {
+  margin: 0; /* обнуляем стандартные отступы */
+}
 
 .feature:hover {
   transform: translateY(-5px);
@@ -182,16 +192,19 @@ header .container{
 } /* живые карточки */
 
 .features h2 {
-  text-align: left;
+  text-align: center;
   margin-bottom: 40px;
   text-transform: uppercase;
-  color: #5ffb6c;
+  color: #54433a;
 }
 
 .features h3 {
   text-align: center;
   margin-bottom: 0;
+  color: #54433a;
 }
+
+
 
 .program {
   padding: 10px;
@@ -208,7 +221,7 @@ header .container{
 .program-list ul {
   flex: 1;
   list-style: none;
-  background: rgb(107, 151, 218);
+  background: #c2835e;
   padding: 20px 20px 10px;
   border-radius: 8px;
 
@@ -219,7 +232,7 @@ header .container{
   
   }
 
-.wews-list {
+.news-list {
   display: flex;
   gap: 20px;
   align-items: stretch;
@@ -228,7 +241,7 @@ header .container{
 
 .we {
   flex: 1;
-  background: rgb(141, 236, 236);
+  background: #c2835e;
   padding: 20px;
   border-radius: 8px;
 } /* делает как карточки */
@@ -243,7 +256,7 @@ header .container{
 
 .review {
   flex: 1;
-  background: rgb(141, 236, 236);
+  background: #be8462;
   padding: 20px;
   border-radius: 8px;
 } /* делает как карточки */
@@ -254,13 +267,13 @@ font-size: 12px;
 line-height: 1.4;
 margin-left: 20px;
 margin-bottom: 10px;
-color: greenyellow;
+color: #330000;
 }
 
 .btn {
   display: inline-block;
-  background: #ff4d4d;
-  color: white;
+  background: #ec9679;
+  color: #fff5e9;
   padding: 12px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -270,13 +283,9 @@ color: greenyellow;
 } 
 
 .btn:hover {
-  background: #e63e3e;
+  background: #ec9679;
+  color: #330000;
   transform: scale(1.05);
-}
-
-p {
-  margin-bottom: 10px;
-  
 }
 
 * {
@@ -288,4 +297,3 @@ p {
     flex-direction: column;
   }
 }
-
