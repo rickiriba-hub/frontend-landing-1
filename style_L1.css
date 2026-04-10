@@ -23,8 +23,8 @@ body {
 header {
   position: sticky;
   top: 0;
-  background: cofee;
-  background-image: url("https://i.pinimg.com/736x/77/13/d5/7713d5750d4d41581f560116be185a5a.jpg");
+  background: #c2835e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /*будет выглядеть дороже*/
   background-size: cover; /* Растягивает изображение на всю область */
   z-index: 100;
 }
@@ -33,11 +33,13 @@ header {
 header .container{
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: space-between;
    
 }
 
 .logo {
+  flex: 1;
   margin: 0;
   padding-top: 0;
   color: #54433a;
@@ -47,6 +49,18 @@ header .container{
   font-style: italic;
   text-transform: uppercase;
   
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .container {
@@ -75,7 +89,7 @@ header .container{
 .hero-image {
   flex: 1;
   display: flex;
-  padding-right: 20px;
+  /* padding-right: 20px; */ 
   justify-content: center;
 }
 
@@ -87,12 +101,10 @@ header .container{
 
 #hero .container {
   display: flex;
-  flex-direction: column; /* элементы идут в колонку */
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 
-  padding: 40px 20px;
   background-color: #c2835e;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -102,6 +114,9 @@ header .container{
 
 #hero {
   padding: 20px 0;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .scroll-top {
@@ -123,9 +138,10 @@ header .container{
 
 
 .nav {
+  margin: 0 auto;
   color: #330000; 
   background: transparent; /* Чтобы sticky меню не пряталось */
-  width: 100%;
+  /* width: 100%; */
   /* z-index: 100; /* Чтобы sticky меню не пряталось */ */
 }
 
@@ -191,7 +207,7 @@ header .container{
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 } /* живые карточки */
 
-.features h2 {
+h2 {
   text-align: center;
   margin-bottom: 40px;
   text-transform: uppercase;
@@ -203,8 +219,6 @@ header .container{
   margin-bottom: 0;
   color: #54433a;
 }
-
-
 
 .program {
   padding: 10px;
@@ -232,14 +246,14 @@ header .container{
   
   }
 
-.news-list {
+.about-list {
   display: flex;
   gap: 20px;
   align-items: stretch;
   padding: 10px;
 }
 
-.we {
+.about-content {
   flex: 1;
   background: #c2835e;
   padding: 20px;
@@ -261,6 +275,22 @@ header .container{
   border-radius: 8px;
 } /* делает как карточки */
 
+.gallery {
+  padding: 20px 0;
+}
+
+.gallery-list {
+  display: block; /* убрать лишние отступы между картинками */
+  flex-wrap: wrap;
+  gap: 20px;
+} /* база */
+
+.gallery-list img {
+  width: calc(50% - 10px);
+  border-radius: 8px;
+  height: 500px; /* одинаковая высота */
+  object-fit: cover; /* аккуратная сетка */
+}
 
 .footer {
 font-size: 12px;
@@ -271,11 +301,13 @@ color: #330000;
 }
 
 .btn {
+  flex: none; /* кнопка не растягивается */
   display: inline-block;
   background: #ec9679;
   color: #fff5e9;
   padding: 12px 20px;
   border-radius: 6px;
+  text-align: center;
   text-decoration: none;
   font-weight: bold;
   margin-top: 15px;
@@ -283,7 +315,7 @@ color: #330000;
 } 
 
 .btn:hover {
-  background: #ec9679;
+  background: #d87f5f;
   color: #330000;
   transform: scale(1.05);
 }
@@ -295,5 +327,25 @@ color: #330000;
 @media (max-width: 768px) {
   #hero .container {
     flex-direction: column;
+    
+  }
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+.nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+  .btn {
+    display: inline-block;
+    
+  }
+.gallery-list img {
+    width: 100%;
+    height: 500px;
   }
 }
